@@ -1,0 +1,173 @@
+.navBar {
+  display: flex;
+  justify-content: space-around;
+  padding: 16px;
+  box-shadow: 0 1px 3px -2px black;
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.shopper {
+  color: #171717;
+  font-size: 38px;
+  font-weight: 600;
+}
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 50px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.nav-menu li {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3px;
+  cursor: pointer;
+}
+.nav-menu li:hover {
+  text-decoration: underline;
+  text-decoration-color: #ff5151;
+  transform: translateY(-10px);
+  width: 80%;
+  height: 3px;
+  border-radius: 10px;
+}
+.nav-login-cart {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+.nav-login-cart button {
+  width: 157px;
+  height: 58px;
+  outline: none;
+  border: 1px solid #7a7a7a;
+  border-radius: 75px;
+  color: #515151;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: white;
+  cursor: pointer;
+}
+.nav-login-cart button:active {
+  background-color: #f3f3f3;
+}
+
+.dropdown {
+  display: none;
+}
+.nav-cart-count {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -35px;
+  margin-left: -35px;
+  border-radius: 14px;
+  font-size: 14px;
+  background-color: red;
+  color: white;
+}
+
+@media (max-width: 1280px) {
+  .navBar {
+    padding: 10px;
+  }
+  .nav-logo {
+    gap: 6px;
+  }
+  .shopper {
+    font-size: 28px;
+    font-weight: 500;
+  }
+  .nav-menu {
+    font-size: 18px;
+    font-weight: 400;
+    gap: 40px;
+  }
+  .nav-login-cart {
+    gap: 38px;
+  }
+  .nav-login-cart button {
+    width: 120px;
+    height: 50px;
+    font-size: 16px;
+  }
+  .nav-cart-count {
+    width: 18px;
+    height: 18px;
+    margin-top: -30px;
+    margin-left: -30px;
+    border-radius: 12px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 800px) {
+  .navBar {
+    padding: 8px;
+  }
+  .nav-logo {
+    gap: 4px;
+  }
+  .shopper {
+    font-size: 20px;
+    font-weight: 400;
+  }
+  .nav-menu {
+    font-size: 14px;
+    font-weight: 400;
+    gap: 35px;
+  }
+  .nav-login-cart {
+    gap: 30px;
+  }
+  .nav-login-cart button {
+    width: 100px;
+    height: 40px;
+    font-size: 14px;
+  }
+  .nav-cart-count {
+    width: 15px;
+    height: 15px;
+    margin-top: -25px;
+    margin-left: -25px;
+    border-radius: 10px;
+    font-size: 10px;
+  }
+  .dropdown {
+    display: block;
+    width: 20px;
+    margin-left: 20px;
+    height: 10px;
+    position: relative;
+    transform: translateX(-30px);
+    rotate: -90deg;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+  .nav-menu {
+    display: none;
+    margin-top: 20px;
+    height: 80px;
+    width: 100%;
+    position: absolute;
+    background-color: white;
+    justify-content: center;
+    top: 50px;
+  }
+  .nav-menu-visible {
+    display: flex;
+  }
+  .dropdown.open {
+    rotate: 90deg;
+    position: relative;
+    transform: translateX(30px);
+  }
+}
