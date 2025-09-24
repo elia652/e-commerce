@@ -1,39 +1,37 @@
-# E-Commerce Backend (Node.js + Express + MongoDB)
+### E-Commerce Backend (Node.js + Express + MongoDB)
 
-## A professional backend API for an e-commerce platform, built with Node.js, Express, and
-
+A professional backend API for an e-commerce platform, built with Node.js, Express, and
 MongoDB. Features include user authentication (JWT), product management, image uploads, and
 shopping cart functionality.
 
-# Tech Stack
+### Tech Stack
 
 • Node.js, Express
-• MongoDB (Atlas or Local)
+• MongoDB 
 • JWT Authentication
 • Multer for file uploads
 • CORS (configured for localhost:3000 & localhost:5173)
 
-# Features
+### Features
 
 • User authentication with JWT (Signup & Login)
 • Product management: Add, Remove, List, Popular, New collection
 • Cart operations: Add, Remove, View per user
 • Image upload with Multer
 
-# Installation & Setup
+### Installation & Setup
 
 1.  Clone the repository
 2.  Install dependencies: `npm install`
-3.  Start the server: `node server.js` (or `nodemon server.js`)
+3.  Start the server: `node index.js`
 4.  Server runs on: `http://localhost:4000`
-    API Reference (Main Endpoints)
 
-# Auth
+### Auth
 
 • POST /signup - Create new user, returns JWT
 • POST /login - Authenticate user, returns JWT
 
-# Products
+### Products
 
 • GET /getProduct - Get all products
 • POST /addproduct - Add new product
@@ -41,17 +39,17 @@ shopping cart functionality.
 • GET /popular - Get top 4 popular in women category
 • GET /newcollection - Get 8 newest products
 
-# Cart (Protected, needs auth-token header)
+### Cart (Protected, needs auth-token header)
 
 • POST /getcart - Fetch user cart
 • POST /addtocart - Add item to cart
 • POST /removeFromCart - Remove item from cart
 
-# Uploads
+### Uploads
 
 • POST /upload - Upload product image (FormData, key=product), returns image_url
 
-# Troubleshooting
+### Troubleshooting
 
 • 401 Unauthorized - Ensure you send 'auth-token' header with valid JWT.
 • CORS Error - Update allowed origins in server.js.
