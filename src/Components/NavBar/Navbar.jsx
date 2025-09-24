@@ -13,6 +13,10 @@ const Navbar = () => {
     menuRef.current.classList.toggle('nav-menu-visible');
     e.target.classList.toggle('open');
   };
+  const handleLogout = () => {
+    localStorage.removeItem('auth-token');
+    window.location.replace('/login');
+  };
   return (
     <div className="navBar">
       <div className="nav-logo">
@@ -60,9 +64,15 @@ const Navbar = () => {
         </li>
       </ul>
       <div className="nav-login-cart">
-        <Link style={{ textDecoration: 'none' }} to="/login">
-          <button>Login</button>
-        </Link>
+        {localStorage.getItem('auth-token') ? (
+          <button type="button" onClick={handleLogout}>
+            Logout
+          </button>
+        ) : (
+          <Link to="/login" style={{ textDecoration: 'none' }}>
+            <button type="button">Login</button>
+          </Link>
+        )}{' '}
         <Link style={{ textDecoration: 'none' }} to="/cart">
           <img src={cart_icon} alt="" />
         </Link>
